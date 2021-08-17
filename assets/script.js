@@ -3,12 +3,12 @@
 /////////////////////
 
 const lc = "qwertyuiopasdfghjklzxcvbnm"; // Character Selections //
-const uc = "QWERTYUIOPASDFGHJKLZXCVBNM";
-const nm = "1234567890";
-const sm = "~`!@#$%^&*()_-+={[}]|\:;<>?/";
+      uc = "QWERTYUIOPASDFGHJKLZXCVBNM";
+      nm = "1234567890";
+      sm = "~`!@#$%^&*()_-+={[}]|\:;<>?/";
 
 const options = ["Lowercase", "Uppercase", "Numbers", "Symbols"]
-const charArr = [lc, uc, nm, sm];
+      charArr = [lc, uc, nm, sm];
 
 let l, u, n, s = false; // Sets character option choices to false
 let checks = [l, u, n, s]; // Sets up an array to check each character option
@@ -122,13 +122,6 @@ document.getElementById("copy").addEventListener('click', function(e) {
     e.preventDefault;
     copyTextSelectioncopyTextSelection('pw','copy');
 })
-
-// Copy text from 'pw' // copyTextSelection(id) //
-function init() {
-
-}
-
-init()
 
 
 /////////////////////////////////////////////////////
