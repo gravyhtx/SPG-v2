@@ -4,7 +4,7 @@
 //////////////////////////
 */
 :root {
-  /* THEME STYLES*/
+  /* THEME STYLES */
   --theme-font-family: "Poppins", Helvetica, sans-serif;
   --theme-secondary-font-family: "Open Sans", Helvetica, sans-serif;
   --theme-monospace-font: 'Courier New', Courier, monospace;
@@ -18,7 +18,7 @@
   --theme-bg-primary: #222224;
   --theme-bg-secondary: #dddde9;
 
-  --theme-font-size-xs:    0.8vw;
+  --theme-font-size-xs:   0.8vw;
   --theme-font-size-sm:   1.0rem;
   --theme-font-size-md:   1.2rem;
   --theme-font-size-lg:   1.67rem;
@@ -28,10 +28,10 @@
   --theme-font-size-yuge: 6.0rem;
 
   /* RESPONSIVE STYLES */
-  --responsive-font-size-xs:   0.0vw;
+  --responsive-font-size-xs:   0.8vw;
   --responsive-font-size-sm:   1.0vw;
   --responsive-font-size-md:   1.2vw;
-  --responsive-font-size-lg:    1.67vw;
+  --responsive-font-size-lg:   1.67vw;
   --responsive-font-size-xl:   2.4vw;
   --responsive-font-size-xxl:  3.5vw;
   --responsive-font-size-xxxl: 4.2vw;
@@ -463,14 +463,6 @@ table {
   font-weight: 500;
 }
 
-/* .pwgen_card-title::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #464b50;
-  height: 2px;
-} */
-
 .card-body {
   min-height: 100px;
 }
@@ -563,26 +555,9 @@ table {
 }
 
 .love {
-  /* position: relative;
-  margin-bottom: 20px;
-  bottom: 0px;
-  text-align: center; */
   margin-bottom: 20px;
   color: #7089a167;
 }
-/* .card-footer::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #464b50;
-  height: 2px;
-} */
-
-/* .card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
-} */
 
 /*
 ///////////////////
@@ -624,7 +599,7 @@ table {
 }
 
 
-@keyframes blink {
+@keyframes blink {  /* Currently not in use but yea it blinks :) */
   100% { color: var(--theme-secondary-dark-color) }
   50% { color: var(--theme-secondary-dark-color) }
   10% { color: var(--theme-primary-dark-color)}
