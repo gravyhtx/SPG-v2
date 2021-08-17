@@ -1,7 +1,7 @@
 # S.P.G. v 2.0
 ## SUPER PASSWORD GENERATION (V2.0)
 made with love by grävy design co.
-@gravyhtx // [gravydesign.co](https://www.gravydesign.co)
+#### @gravyhtx // [gravydesign.co](https://www.gravydesign.co)
 
 ### Description
 This is a simple, highly stylized JavaScript (ES6) app that generates a random string of characters based on the user's input selection -- Uppercase, Lowercase, Number, and/or Symbols. While most passwords request anywhere between 8-128, this app truly lowers the bar and sets the minimum to 4 because pin numbers. Responsive design techniques are used to create this beautiful masterpiece of modern form and function.
