@@ -1,0 +1,632 @@
+/*
+//////////////////////////
+// ROOT STYLE VARIABLES //
+//////////////////////////
+*/
+:root {
+  /* THEME STYLES*/
+  --theme-font-family: "Poppins", Helvetica, sans-serif;
+  --theme-secondary-font-family: "Open Sans", Helvetica, sans-serif;
+  --theme-monospace-font: 'Courier New', Courier, monospace;
+
+  --theme-primary-dark-color: #222224;
+  --theme-secondary-dark-color: #3b4954;
+  --theme-primary-medium-color: #646464;
+  --theme-primary-light-color: #ebebeb;
+  --theme-disabled-color: #bbbbbb;
+
+  --theme-bg-primary: #222224;
+  --theme-bg-secondary: #dddde9;
+
+  --theme-font-size-xs:    0.8vw;
+  --theme-font-size-sm:   1.0rem;
+  --theme-font-size-md:   1.2rem;
+  --theme-font-size-lg:   1.67rem;
+  --theme-font-size-xl:   2.4rem;
+  --theme-font-size-xxl:  3.5rem;
+  --theme-font-size-xxxl: 4.2rem;
+  --theme-font-size-yuge: 6.0rem;
+
+  /* RESPONSIVE STYLES */
+  --responsive-font-size-xs:   0.0vw;
+  --responsive-font-size-sm:   1.0vw;
+  --responsive-font-size-md:   1.2vw;
+  --responsive-font-size-lg:    1.67vw;
+  --responsive-font-size-xl:   2.4vw;
+  --responsive-font-size-xxl:  3.5vw;
+  --responsive-font-size-xxxl: 4.2vw;
+  --responsive-font-size-yuge: 6.0vw;
+
+
+
+  /* CONTENT/IMAGES */
+  /* --logo-text-img: url("img/spgbkg.jpg"); */
+  /* --logo-icon-img: url("img/spgbkg.jpg"); */
+  --main-bkg-img: url("img/spgbkg.jpg");
+  /* --index-hero: url("img/hero.jpg"); */
+
+  /* ELEMENT DEFAULT COLORS */
+  --header-primary-color: #cad8e7;
+  --header-secondary-color: #a7b0bb;
+
+  --button-bg-main: #2d2d2d;
+  --button-bg-dark: #1a1a1a;
+  --button-bg-darker: #070707;
+  --button-bg-light: #d8d8d8;
+  --button-bg-lighter: #eeeeee;
+  --button-bg-focus: #2e3235;
+  --button-color-main: #eeeeee;
+  --button-bg-dark-translucent: #00000020;
+  --button-bg-light-translucent: #dbe5eb10;
+  --button-primary-light-color: #eeeeee;
+  --button-color-disabled: #3f3f3f;
+  --button-bg-disabled: #787878;
+
+  --box-shadow-darken: 0 0 10px #00000025;
+  --box-shadow-highlight: 0 0 10px #ffffff25;
+
+  /* GRAVY COLORS */
+  --dark-gravy: #64483b;
+  --light-gravy: #d6c8b4;
+  --mintberry-crunch: #80ecc3;
+}
+
+/*
+///////////////////
+// GLOBAL STYLES //
+///////////////////
+*/
+* {
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0px solid transparent;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  max-width: 100vw;
+  font-size: 1rem;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+html::-webkit-scrollbar,  /* Remove scrollbar from DOM */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: var(--theme-font-family);
+  line-height: 1;
+  background-color: var(--theme-bg-primary);
+  background-image: var(--main-bkg-img);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+   text-decoration: none;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  padding: 20px 0;  /* Add top/bottom gutter to "<main>" content... between "<header>" and "<footer>") */
+  min-height: 100vh;
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  margin-bottom: 0 auto;
+  bottom: 0px;
+  text-align: center;
+  min-height: 20px;
+}
+
+textarea,
+input {
+  word-break: break-all;
+  resize: none;
+  width: 100%;
+}
+
+button {
+  border: 0;
+  color: var(--button-color-main);
+  background-color: var(--button-bg-main);
+  padding: 10px;
+}
+
+button:active,
+button:focus {
+  color:var(--button-color-main);
+}
+
+button:hover {
+  box-shadow: var(--box-shadow-darken);
+}
+
+i {
+  background-color: transparent;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*
+//////////////////////////
+// CUSTOM STYLE CLASSES //
+//////////////////////////
+*/
+
+/* Remove/Add Styles */
+.no-outline,
+.no-outline:focus {  /* Remove outline without "none", keeps functionality */
+  outline: 0px solid transparent;
+}
+
+.no-select,
+.no-select:focus {  /* Remove ability to select text */
+  cursor: default;
+  -webkit-touch-callout: none;  /* iOS Safari */
+    -webkit-user-select: none;  /* Safari */
+     -khtml-user-select: none;  /* Konqueror HTML */
+   -moz-user-select: none;  /* Old versions of Firefox */
+    -ms-user-select: none;  /* Internet Explorer/Edge */
+       user-select: none;  /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.no-pointer-events {  /* Removes all element functionality */
+  cursor: default;
+  pointer-events: none;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+   -moz-user-select: none;
+    -ms-user-select: none;
+       user-select: none;
+}
+
+.no-decoration {  /* Remove all decoration styles and default appearance */
+  text-decoration: none;
+  cursor: default;
+  outline: 0px solid transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+}
+
+.no-scrollbar {  /* Remove scrollbar */
+  -ms-overflow-style: none;  /* IE and Edge */
+     scrollbar-width: none;  /* Firefox */
+}
+
+.remove-default-appearance {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.vertical-resize {
+  resize: vertical;
+}
+
+.horizontal-resize {
+  resize: horizontal;
+}
+
+/*--------------------------------------*/
+
+
+/* Element styles */
+.center-text {
+  text-align: center;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.justify-text {
+  text-align: justify;
+}
+
+.centered-container {
+    margin: 0 auto;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    position: fixed;
+    z-index: 1000;
+    min-width: 350px;
+    max-width: 350px;
+    top: 160px;
+}
+
+.xxxl {
+  font-size: var(--responsive-font-size-xxxl);
+}
+
+.xxl {
+  font-size: var(--responsive-font-size-xxl);
+}
+
+.xl {
+  font-size: var(--responsive-font-size-xl);
+}
+
+.lg {
+  font-size: var(--responsive-font-size-lg);
+}
+
+.md {
+  font-size: var(--responsive-font-size-md);
+}
+
+.sm {
+  font-size: var(--responsive-font-size-sm);
+}
+
+.xs {
+  font-size: var(--responsive-font-size-xs);
+  font-weight: 500;
+}
+/*--------------------------------------*/
+
+
+/* Scroll-snap to "scroll-area" classes inside "scroll-container" container */
+
+.scroll-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: auto !important; /* Required for "Scroll-Snap" */
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-area {
+  scroll-snap-align: start;
+}
+
+.scroll-container,
+.scroll-area {
+  margin: 0 auto;
+}
+
+.scroll-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+/*--------------------------------------*/
+
+
+/* Containers */
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.container::after { /* CLEARFIX */
+  content: "";
+  clear: both;
+  display: table;
+}
+/*--------------------------------------*/
+
+/* Placeholder Styles */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--theme-primary-medium-color);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--theme-primary-medium-color);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--theme-primary-medium-color);
+}
+/*--------------------------------------*/
+
+
+/*
+//////////////////////////
+// CUSTOM STYLE CLASSES //
+//////////////////////////
+*/
+
+.spg-japanese {
+  font-size: 4.2vw;
+  font-weight: 800;
+  color: var(--header-primary-color);
+}
+
+.title {
+  color: var(--header-secondary-color);
+}
+
+.title-card {
+  line-height: .8;
+  background-color: var(--button-bg-light-translucent);
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 55vw;
+  border: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(255, 235, 242);
+
+}
+
+.pwgen_card {
+  background-color: hsla(203, 64%, 91%, 0.7);
+  border: 10px solid rgb(182, 245, 245);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  color: var(--theme-secondary-dark-color);
+  font-size: 1rem;
+  margin: 0 auto;
+  margin-top: 25px;
+  max-width: 55vw;
+  padding: 20px 40px;
+}
+
+.pwgen_card-title {
+  font-size: var(--responsive-font-size-sm);
+  line-height: 1.2;
+}
+
+.generate-pw-title {
+  margin-top: 20px;
+  font-weight: 800;
+}
+
+.generate-pw-en{
+  font-weight: 500;
+}
+
+/* .pwgen_card-title::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #464b50;
+  height: 2px;
+} */
+
+.card-body {
+  min-height: 100px;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+.pwgen_input-box {
+  position: relative;
+}
+
+.pw {
+  position: relative;
+  font-size: var(--responsive-font-size-lg);
+  font-family: var(--theme-monospace-font);
+  color: var(--theme-primary-dark-color);
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px 20px;
+  border: 2px solid #9ba4ad;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}
+
+.blink {
+  animation: blink .1s linear infinite;
+}
+
+.pw-text {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* CENTER VERTICAL/HORIZONTAL ALIGN TEXT */
+}
+
+.generate-btn {
+  border: 5px solid var(--mintberry-crunch);
+  border-radius: 20px;
+  /* box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1); */
+  display: inline-block;
+  font-family: var(--theme-font-family);
+  width: 200px;
+}
+
+.generate-btn:focus {
+  /* text-shadow: 0 0 10px #ffffff; */
+  background-color: var(--button-bg-focus);
+  border: 5px solid var(--mintberry-crunch);
+}
+
+.copy {
+  margin: 10px auto;
+  width: 200px;
+  color:black;
+  background-color: rgb(216, 216, 216);
+}
+
+.copied {
+  color:black;
+  
+}
+
+.copy:disabled {
+  color: var(--button-color-disabled);
+  background-color: var(--button-bg-disabled);
+  opacity: 0.8;
+}
+
+.copy-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 30px;
+  z-index:1000;
+  float: right;
+  padding: 5px;
+  background-color: transparent;
+  color: var(--theme-primary-dark-color);
+}
+
+.copy-btn-txt {
+  font-size: 14px;
+}
+
+.disabled {
+  color: var(--theme-disabled-color);
+}
+
+.copy-ready {
+  color: var(--theme-primary-dark-color);
+}
+
+.love {
+  /* position: relative;
+  margin-bottom: 20px;
+  bottom: 0px;
+  text-align: center; */
+  margin-bottom: 20px;
+  color: #7089a167;
+}
+/* .card-footer::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  background: #464b50;
+  height: 2px;
+} */
+
+/* .card-footer::after {
+  content: " ";
+  display: block;
+  clear: both;
+} */
+
+/*
+///////////////////
+// MOBILE STYLES //
+///////////////////
+*/
+
+@media screen and (max-width: 800px) {
+  main {
+  padding: 10px 0;
+  }
+  .spg-japanese {
+  font-size: 6vw;
+  }
+  .generate-pw-title {
+  font-size: 1.2rem;
+  }
+  .generate-pw-en {
+  font-size: 0.8rem;
+  }
+  .card-body {
+  min-height: 75px;
+  }
+  .title {
+  font-size: .8rem;
+  }
+  .title-card,
+  .pwgen_card {
+  max-width: 92vw;
+  padding: 10px 20px;
+  }
+  .pwgen_card-title {
+  font-size: 0.8rem;
+  }
+  .pw {
+  height: 40px;
+  font-size: 1rem;
+  }
+}
+
+
+@keyframes blink {
+  100% { color: var(--theme-secondary-dark-color) }
+  50% { color: var(--theme-secondary-dark-color) }
+  10% { color: var(--theme-primary-dark-color)}
+  0% { color: var(--theme-primary-medium-color) }
+}
