@@ -22,4 +22,4 @@ Future development will get rid of those nasty alerts. Ew. Form boxes are on the
 Also it's going to be likely pointless to point out any better way of doing this because you can basically just steal this code and do whatever you want, but of course go ahead and come with it on the bug fixes
 
 ### Link
-[Click here to see the S.P.G. v2.0 in action](http://www.gravyhtx.github.io/spg-v2)
+[Click here to see the S.P.G. v2.0 in action](https://gravyhtx.github.io/SPG-v2/)
