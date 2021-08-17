@@ -8,13 +8,14 @@ const nm = "1234567890";
 const sm = "~`!@#$%^&*()_-+={[}]|\:;<>?/";
 
 const options = ["Lowercase", "Uppercase", "Numbers", "Symbols"]
+const charArr = [lc, uc, nm, sm];
 
 let l, u, n, s = false; // Sets character option choices to false
 let checks = [l, u, n, s]; // Sets up an array to check each character option
 
 let pw = "";
 
-const copyArea = document.getElementById("copy")
+copyArea = document.getElementById("copy")
 
 
 /////////////////////
@@ -31,7 +32,7 @@ pwQuery = () => { // *click*
         alert("Please enter a number between 4-128")
         pwQuery();
     } else { // Ask questions & concatenate options
-        for (let i=0; i < options.length; i++) {queryConcat(options, pw, options, checks, i);}
+        for (let i=0; i < options.length; i++) {queryConcat(options, pw, charArr, checks, i);}
         pwGen(len, pw);
     }
 }
@@ -81,7 +82,7 @@ pwChArr = () => { // Returns string with one character from each set of options 
     let choices = ""
 
     for (let i=0; i < checks.length; i++) {
-        checks[i] ? choices += options[i].charAt(randomize(options[i].length)) : null;
+        checks[i] ? choices += charArr[i].charAt(randomize(charArr[i].length)) : null;
     }
 
     return choices
@@ -104,8 +105,8 @@ copyTextSelection = (text, btn) => { // Copy password from selected input value 
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     document.execCommand("copy");
-    // alert('PASSWORD COPIED!!!\r\n\r\n"' + copyText.value + '"'); // Displays copied text in readable format with regex
-    console.log(copyText.value); // Displays copied text
+    // alert('PASSWORD COPIED!!!\r\n\r\n"' + copyText.value + '"'); // Displaays copied text in readavle forfat with regex
+    console.log(copyText.value); // Displaays copied text in readavle forfat with regex
     alert('PASSWORD COPIED!!!');
     copyBtn.textContent = "COPIED!";
     copyText.classList.add("no-pointer-events");
@@ -119,8 +120,15 @@ copyTextSelection = (text, btn) => { // Copy password from selected input value 
 
 document.getElementById("copy").addEventListener('click', function(e) {
     e.preventDefault;
-    copyTextSelection('pw','copy');
+    copyTextSelectioncopyTextSelection('pw','copy');
 })
+
+// Copy text from 'pw' // copyTextSelection(id) //
+function init() {
+
+}
+
+init()
 
 
 /////////////////////////////////////////////////////
@@ -164,7 +172,7 @@ if('IntersectionObserver' in window) {
 }
 
 // CLEAR TEXT SELECTION //
-clearSelection = () => { // This feature is not being used right now
+clearSelection = () => { // Currently not being used
     if (window.getSelection) {window.getSelection().removeAllRanges();}
     else if (document.selection) {document.selection.empty();}
 }
