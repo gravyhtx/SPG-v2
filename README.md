@@ -1,5 +1,5 @@
 # S.P.G. v2.0
-## SUPER PASSWORD GENERATION (V2.0)
+## SUPER PASSWORD GENERATION (Version 2.0)
 made with love by grävy design co.
 #### @gravyhtx // [gravydesign.co](https://www.gravydesign.co)
 
