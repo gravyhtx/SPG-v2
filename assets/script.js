@@ -32,7 +32,7 @@ pwQuery = () => { // *click*
         alert("Please enter a number between 4-128")
         pwQuery();
     } else { // Ask questions & concatenate options
-        for (let i=0; i < options.length; i++) {queryConcat(options, pw, charArr, checks, i);}
+        for (let i=0; i < options.length; i++) {queryConcat(options, pw, options, checks, i);}
         pwGen(len, pw);
     }
 }
@@ -82,7 +82,7 @@ pwChArr = () => { // Returns string with one character from each set of options 
     let choices = ""
 
     for (let i=0; i < checks.length; i++) {
-        checks[i] ? choices += charArr[i].charAt(randomize(charArr[i].length)) : null;
+        checks[i] ? choices += options[i].charAt(randomize(options[i].length)) : null;
     }
 
     return choices
