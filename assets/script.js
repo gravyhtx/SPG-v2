@@ -123,13 +123,6 @@ document.getElementById("copy").addEventListener('click', function(e) {
     copyTextSelection('pw','copy');
 })
 
-// Copy text from 'pw' // copyTextSelection(id) //
-function init() {
-
-}
-
-init()
-
 
 /////////////////////////////////////////////////////
 // ----------------------------------------------- //
