@@ -15,7 +15,7 @@ let checks = [l, u, n, s]; // Sets up an array to check each character option
 
 let pw = "";
 
-copyArea = document.getElementById("copy")
+const copyArea = document.getElementById("copy")
 
 
 /////////////////////
