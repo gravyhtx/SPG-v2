@@ -105,8 +105,8 @@ copyTextSelection = (text, btn) => { // Copy password from selected input value 
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     document.execCommand("copy");
-    // alert('PASSWORD COPIED!!!\r\n\r\n"' + copyText.value + '"'); // Displaays copied text in readavle forfat with regex
-    console.log(copyText.value); // Displaays copied text in readavle forfat with regex
+    // alert('PASSWORD COPIED!!!\r\n\r\n"' + copyText.value + '"'); // Displays copied text in readable format with regex
+    console.log(copyText.value); // Displays copied text
     alert('PASSWORD COPIED!!!');
     copyBtn.textContent = "COPIED!";
     copyText.classList.add("no-pointer-events");
