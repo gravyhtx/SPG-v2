@@ -3,12 +3,11 @@
 /////////////////////
 
 const lc = "qwertyuiopasdfghjklzxcvbnm"; // Character Selections //
-      uc = "QWERTYUIOPASDFGHJKLZXCVBNM";
-      nm = "1234567890";
-      sm = "~`!@#$%^&*()_-+={[}]|\:;<>?/";
+const uc = "QWERTYUIOPASDFGHJKLZXCVBNM";
+const nm = "1234567890";
+const sm = "~`!@#$%^&*()_-+={[}]|\:;<>?/";
 
 const options = ["Lowercase", "Uppercase", "Numbers", "Symbols"]
-      charArr = [lc, uc, nm, sm];
 
 let l, u, n, s = false; // Sets character option choices to false
 let checks = [l, u, n, s]; // Sets up an array to check each character option
@@ -165,7 +164,7 @@ if('IntersectionObserver' in window) {
 }
 
 // CLEAR TEXT SELECTION //
-clearSelection = () => {
+clearSelection = () => { // This feature is not being used right now
     if (window.getSelection) {window.getSelection().removeAllRanges();}
     else if (document.selection) {document.selection.empty();}
 }
