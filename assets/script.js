@@ -120,7 +120,7 @@ copyTextSelection = (text, btn) => { // Copy password from selected input value 
 
 document.getElementById("copy").addEventListener('click', function(e) {
     e.preventDefault;
-    copyTextSelectioncopyTextSelection('pw','copy');
+    copyTextSelection('pw','copy');
 })
 
 
