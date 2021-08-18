@@ -567,34 +567,34 @@ table {
 
 @media screen and (max-width: 800px) {
   main {
-  padding: 10px 0;
+    padding: 10px 0;
   }
   .spg-japanese {
-  font-size: 6vw;
+    font-size: 6vw;
   }
   .generate-pw-title {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
   }
   .generate-pw-en {
-  font-size: 0.8rem;
+    font-size: 0.8rem;
   }
   .card-body {
-  min-height: 75px;
+    min-height: 75px;
   }
   .title {
-  font-size: .8rem;
+    font-size: .8rem;
   }
   .title-card,
   .pwgen_card {
-  max-width: 92vw;
-  padding: 10px 20px;
+    max-width: 92vw;
+    padding: 10px 20px;
   }
   .pwgen_card-title {
-  font-size: 0.8rem;
+    font-size: 0.8rem;
   }
   .pw {
-  height: 40px;
-  font-size: 1rem;
+    height: 40px;
+    font-size: 1rem;
   }
 }
 
