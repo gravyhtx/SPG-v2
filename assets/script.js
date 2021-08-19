@@ -51,7 +51,7 @@ shuffle = (str) => { // Randomizes character order of a string
     let n = arr.length;
     // String to Array > Output randomized Array > Array back to String
     for (let i=0 ; i < n-1 ; ++i) {
-        let r = randomize(n); let output = arr[i];arr[i] = arr[r]; arr[r] = output;
+        let r = randomize(n); let output = arr[i]; arr[i] = output;
     }
     str = arr.join('');
     return str;
