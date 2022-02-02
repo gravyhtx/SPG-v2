@@ -49,9 +49,9 @@ randomize = (n) => { // Math.random() Shortcut :)
 shuffle = (str) => { // Randomizes character order of a string
     let arr = str.split('');
     let n = arr.length;
-    // String to Array > Output randomized Array > Array back to String
+    // Output randomized Array
     for (let i=0 ; i < n-1 ; ++i) {
-        let r = randomize(n); let output = arr[i]; arr[i] = output;
+        let r = randomize(i); [arr[i],arr[r]] = [arr[r],arr[i]];
     }
     str = arr.join('');
     return str;
